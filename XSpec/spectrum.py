@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 import os
-import pyfits
+import sys
+try:
+    import pyfits
+except ImportError:
+    import astropy.io.fits as pyfits
 import numpy as np
 
 from matplotlib import rc
@@ -28,8 +32,8 @@ kwargs = dict(path_effects=[myeffect])
 # 1.3 and for Paranal. See
 # https://www.eso.org/observing/etc/bin/gen/form?INS.MODE=swspectr+INS.NAME=SKYCALC
 
-PAR_RADIA = os.path.join(os.path.dirname(__file__), "etc/paranal_radia_15_13.txt")
-PAR_TRANS = os.path.join(os.path.dirname(__file__), "etc/paranal_trans_10_13_mod.txt")
+PAR_RADIA = os.path.join(os.path.dirname(sys.modules['XSpec'].__file__), "etc/paranal_radia_15_13.txt")
+PAR_TRANS = os.path.join(os.path.dirname(sys.modules['XSpec'].__file__), "etc/paranal_trans_10_13_mod.txt")
 
 class spectrum2d:
     """  Spectrum class for data manipulation and analysis

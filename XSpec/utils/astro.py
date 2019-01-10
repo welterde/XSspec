@@ -4,8 +4,11 @@ Miscellaneous functions for astronomical use
 """
 __version__ = "0.2"
 
-import os 
-import pyfits
+import os
+try:
+    import pyfits
+except ImportError:
+    import astropy.io.fits as pyfits
 import operator
 from xml.dom import minidom
 from urllib2 import urlopen

@@ -2,7 +2,10 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-import pyfits
+try:
+    import pyfits
+except ImportError:
+    import astropy.io.fits as pyfits
 
 from matplotlib.backends.backend_pdf import PdfPages
 from scipy import interpolate
