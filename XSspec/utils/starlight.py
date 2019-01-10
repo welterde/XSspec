@@ -16,17 +16,17 @@ import matplotlib.pyplot as plt
 from .astro import binspec
 from matplotlib.backends.backend_pdf import PdfPages
 
-SL_BASE = os.path.join(os.path.dirname(sys.modules['XSpec'].__file__), "etc/Base.BC03.15lh")
-SL_CONFIG = os.path.join(os.path.dirname(sys.modules['XSpec'].__file__), "etc/XS_SLv01.config")
-SL_CONFIG = os.path.join(os.path.dirname(sys.modules['XSpec'].__file__), "etc/XS_SLv01_15lh.config")
+SL_BASE = os.path.join(os.path.dirname(sys.modules['XSspec'].__file__), "etc/Base.BC03.15lh")
+SL_CONFIG = os.path.join(os.path.dirname(sys.modules['XSspec'].__file__), "etc/XS_SLv01.config")
+SL_CONFIG = os.path.join(os.path.dirname(sys.modules['XSspec'].__file__), "etc/XS_SLv01_15lh.config")
 
-SL_MASK = os.path.join(os.path.dirname(sys.modules['XSpec'].__file__), "etc/Masks.EmLines.SDSS.gm")
-SL_BASES = os.path.join(os.path.dirname(sys.modules['XSpec'].__file__), "etc/bases")
+SL_MASK = os.path.join(os.path.dirname(sys.modules['XSspec'].__file__), "etc/Masks.EmLines.SDSS.gm")
+SL_BASES = os.path.join(os.path.dirname(sys.modules['XSspec'].__file__), "etc/bases")
 
 if platform.platform().startswith('Linux'):
-    SL_EXE = os.path.join(os.path.dirname(sys.modules['XSpec'].__file__), "etc/starlight")
+    SL_EXE = os.path.join(os.path.dirname(sys.modules['XSspec'].__file__), "etc/starlight")
 else:
-    SL_EXE = os.path.join(os.path.dirname(sys.modules['XSpec'].__file__), "etc/starlight_mac")
+    SL_EXE = os.path.join(os.path.dirname(sys.modules['XSspec'].__file__), "etc/starlight_mac")
 
 
 def asciiout(s2d, wl, spec, err=[], resample=1, name='', div=-17,

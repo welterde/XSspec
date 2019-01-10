@@ -1,5 +1,5 @@
 import os
-from setuptools import setup
+from setuptools import setup, find_packages
 from setuptools.command.install import install
 from distutils import log
 
@@ -15,9 +15,9 @@ class OverrideInstall(install):
                 os.chmod(filepath, mode)
 
 
-setup(name='XSpec',
+setup(name='XSspec',
       version='0.2',
-      packages=['XSpec', 'XSpec.analysis', 'XSpec.io', 'XSpec.utils'],
-      package_data={'XSpec': ['etc/*', 'etc/bases/*']},
+      packages=find_packages(),
+      package_data={'XSspec': ['etc/*', 'etc/bases/*']},
       cmdclass={'install': OverrideInstall}
 )

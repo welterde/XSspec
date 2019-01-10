@@ -32,8 +32,8 @@ kwargs = dict(path_effects=[myeffect])
 # 1.3 and for Paranal. See
 # https://www.eso.org/observing/etc/bin/gen/form?INS.MODE=swspectr+INS.NAME=SKYCALC
 
-PAR_RADIA = os.path.join(os.path.dirname(sys.modules['XSpec'].__file__), "etc/paranal_radia_15_13.txt")
-PAR_TRANS = os.path.join(os.path.dirname(sys.modules['XSpec'].__file__), "etc/paranal_trans_10_13_mod.txt")
+PAR_RADIA = os.path.join(os.path.dirname(sys.modules['XSspec'].__file__), "etc/paranal_radia_15_13.txt")
+PAR_TRANS = os.path.join(os.path.dirname(sys.modules['XSspec'].__file__), "etc/paranal_trans_10_13_mod.txt")
 
 class spectrum2d:
     """  Spectrum class for data manipulation and analysis
